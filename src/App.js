@@ -24,7 +24,7 @@ function App() {
   const formatTime = (time) => {
     let minute = Math.floor(time/60);
     let remainingSeconds = time%60;
-    return `${minute} : ${remainingSeconds < 10 ? "0" : ""} ${remainingSeconds}`
+    return `${minute} : ${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`
   }
 
  const reset = () =>{
