@@ -24,7 +24,7 @@ function App() {
   const formatTime = (time) => {
     let minute = Math.floor(time/60);
     let remainingSeconds = time%60;
-    return `${minute} : ${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`
+    return `${minute}:${remainingSeconds < 10 ? `0${remainingSeconds}` : `${remainingSeconds}`}`
   }
 
  const reset = () =>{
@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="App">
       <h1>Stopwatch</h1>
-      <h2>Time : {formatTime(elapsedtime)} </h2>
+      <h2>Time: {formatTime(elapsedtime)} </h2>
       <button onClick={()=>setIsrunning(!isRunning)}>{isRunning ? "Stop" : "Start"}</button>
       <button onClick={reset}>Reset</button>
     </div>
